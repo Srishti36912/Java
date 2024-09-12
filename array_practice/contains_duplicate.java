@@ -7,6 +7,7 @@ public class contains_duplicate {
         Scanner sc = new Scanner(System.in);
         int array[] = new int[5];
         int m = 0;
+        int c = 0;
         for(int i=0; i<5; i++) {
             array[i] = sc.nextInt();
         }
@@ -18,13 +19,17 @@ public class contains_duplicate {
             else
             {
                 if(array[m] == array[i]) {
-                    System.out.println("Contains Duplicate");
+                    c++;
                     break;
                 }
             }
         }
         m++;
         }
+        if(c>0) {
+            System.out.println("Contains Duplicate");
+        } else {
         System.out.println("Does not contain duplicate");
+        }
     }
 }
