@@ -9,6 +9,8 @@ public class max_min {
         for(int i=0; i<a.length; i++) {
             a[i] = sc.nextInt();
         }
+        // m = Integer.max();
+        // System.out.println(m);
         int max = a[0];
         int min = a[0];
         for(int i=1; i<a.length; i++) {
