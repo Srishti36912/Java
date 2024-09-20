@@ -1,6 +1,6 @@
 package array_practice;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class max_min {
     public static void main(String[] args) {
@@ -9,18 +9,21 @@ public class max_min {
         for(int i=0; i<a.length; i++) {
             a[i] = sc.nextInt();
         }
-        // m = Integer.max();
-        // System.out.println(m);
-        int max = a[0];
-        int min = a[0];
-        for(int i=1; i<a.length; i++) {
-            if(max < a[i]) {
-                max = a[i];
-            } else if(min > a[i]) {
-                min = a[i];
-            }
-        }
-        System.out.println("Maximum = " + max);
-        System.out.println("Minimum = " + min);
+        // int max = a[0];
+        // int min = a[0];
+        // for(int i=1; i<a.length; i++) {
+        //     if(max < a[i]) {
+        //         max = a[i];
+        //     } else if(min > a[i]) {
+        //         min = a[i];
+        //     }
+        // }
+        // System.out.println("Maximum = " + max);
+        // System.out.println("Minimum = " + min);
+
+
+        //Time complexity=O(n log(n))
+        Arrays.sort(a);
+        System.out.println("Maximum element = " +a[a.length-1] + "Minimum element = " +a[0]);
     }
 }

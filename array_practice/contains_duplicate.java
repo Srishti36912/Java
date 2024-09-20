@@ -11,25 +11,36 @@ public class contains_duplicate {
         for(int i=0; i<5; i++) {
             array[i] = sc.nextInt();
         }
-        while(m<5) {
-        for(int i=0; i<4; i++) {
-            if(m == i) {
-                continue;
+        // while(m<5) {
+        // for(int i=0; i<4; i++) {
+        //     if(m == i) {
+        //         continue;
+        //     }
+        //     else
+        //     {
+        //         if(array[m] == array[i]) {
+        //             c++;
+        //             break;
+        //         }
+        //     }
+        // }
+        // m++;
+        // }
+        // if(c>0) {
+        //     System.out.println("Contains Duplicate");
+        // } else {
+        // System.out.println("Does not contain duplicate");
+        // }
+
+
+        //Time complexity = O(n logn)
+        Arrays.sort(array);
+        for(int i=0; i<array.length; i++) {
+            if(array[i] == array[i+1]) {
+                System.out.println("Contains Duplicate");
+            } else {
+                System.out.println("Does not contain duplicate");
             }
-            else
-            {
-                if(array[m] == array[i]) {
-                    c++;
-                    break;
-                }
-            }
-        }
-        m++;
-        }
-        if(c>0) {
-            System.out.println("Contains Duplicate");
-        } else {
-        System.out.println("Does not contain duplicate");
         }
     }
 }

@@ -10,7 +10,7 @@ public class reverse {
             arr[i] = sc.nextInt();
         }
         for(int i=4; i>=0; i--) {
-            System.out.print(arr[i] + " ");
+            System.out.print(arr[i] + " "); //Time complexity = O(n^2)
         }
     }
 }
