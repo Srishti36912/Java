@@ -6,7 +6,7 @@ public class contains_duplicate {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int array[] = new int[5];
-        int m = 0;
+        // int m = 0;
         int c = 0;
         for(int i=0; i<5; i++) {
             array[i] = sc.nextInt();
@@ -35,12 +35,15 @@ public class contains_duplicate {
 
         //Time complexity = O(n logn)
         Arrays.sort(array);
-        for(int i=0; i<array.length; i++) {
+        for(int i=0; i<array.length-1; i++) {
             if(array[i] == array[i+1]) {
-                System.out.println("Contains Duplicate");
-            } else {
-                System.out.println("Does not contain duplicate");
+                c++;
             }
+        }
+        if(c > 0) {
+            System.out.println("Contains Duplicate");
+        } else {
+            System.out.println("Does not contain duplicate");
         }
     }
 }
