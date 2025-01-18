@@ -1,3 +1,4 @@
+package array_practice;
 import java.util.*;
 public class subarray {
     public static void main(String args[]) {
