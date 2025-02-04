@@ -1,7 +1,7 @@
 import java.util.*;
 public class selection {
 
-    int select(int arr[], int i)
+    static int select(int arr[], int i)
     {
     // code here such that selecionSort() sorts arr[]
     int min = i;
@@ -14,17 +14,17 @@ public class selection {
     return min;
     }
 
-    void selectionSort(int arr[], int n)
+    static void selectionSort(int arr[], int n)
     {
-  //code here
-  int temp = 0;
-  for(int i=0; i<n-1; i++) {
-    int min = select(arr,i);
-      
-    temp = arr[i];
-    arr[i] = arr[min];
-    arr[min] = temp;
-    }
+      //code here
+      int temp = 0;
+      for(int i=0; i<n-1; i++) {
+      int min = select(arr,i);
+        
+      temp = arr[i];
+      arr[i] = arr[min];
+      arr[min] = temp;
+      }
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
